@@ -21,16 +21,20 @@ public class MutationEngine {
         ABS, AOR, LCR, ROR, UOI
     }
 
-    HashMap<String, Operator> operator = new HashMap<String, Operator>();
-
-    public void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
         if (args.length != 3) {
             System.out.println("DemoSrcMutationEngine: <source_java_file> <mutant_pool_dir> <operator_type>");
+            System.out.println("Example params: src/main/java/edu/nju/mutest/example/Calculator.java pool/ abs");
             System.exit(0);
         }
 
-        initOperator();
+        HashMap<String, Operator> operator = new HashMap<String, Operator>();
+        operator.put("abs", Operator.ABS);
+        operator.put("aor", Operator.AOR);
+        operator.put("lcr", Operator.LCR);
+        operator.put("ror", Operator.ROR);
+        operator.put("uoi", Operator.UOI);
 
         // Read in original program(s).
         File srcFile = new File(args[0]);
@@ -49,14 +53,17 @@ public class MutationEngine {
         switch (opt){
             case ABS:
                 mutator = new ABSMutator(cu);
+                break;
             case AOR:
             case LCR:
             case ROR:
             case UOI:
                 mutator = new BinaryMutator(cu);
+                break;
             default:
                 System.out.println("This mutator is not available!");
                 System.exit(1);
+                break;
         }
 
 
@@ -122,12 +129,4 @@ public class MutationEngine {
 
     }
 
-    public void initOperator(){
-        operator.put("abs", Operator.ABS);
-        operator.put("aor", Operator.AOR);
-        operator.put("lcr", Operator.LCR);
-        operator.put("ror", Operator.ROR);
-        operator.put("uoi", Operator.UOI);
-
-    }
 }
