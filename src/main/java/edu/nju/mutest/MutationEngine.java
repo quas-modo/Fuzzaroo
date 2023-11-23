@@ -6,6 +6,7 @@ import com.github.javaparser.ast.PackageDeclaration;
 import edu.nju.mutest.mutator.ABSMutator;
 import edu.nju.mutest.mutator.BinaryMutator;
 import edu.nju.mutest.mutator.Mutator;
+import edu.nju.mutest.mutator.UOIMutator;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -58,7 +59,7 @@ public class MutationEngine {
             case LCR:
             case ROR:
             case UOI:
-                mutator = new BinaryMutator(cu);
+                mutator = new UOIMutator(cu);
                 break;
             default:
                 System.out.println("This mutator is not available!");
