@@ -15,16 +15,17 @@ import java.util.stream.Collectors;
  */
 public class DemoMutantExecution {
 
+    static String TEST_SUITE_FQN = "edu.nju.mutest.example.CalculatorTest";
 
-    // Use fixed test suite in this demo.
-    static String TEST_SUITE_FQN = "edu.nju.mutest.example.CalculatorTestSuite";
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        if (args.length != 2) {
+        if (args.length != 3) {
             // Require param for specifying test suite.
             System.out.println("DemoMutantExecution: <testsuite_dir> <mutant_pool_dir>");
             System.exit(0);
         }
+
+        TEST_SUITE_FQN = args[2];
 
         File tsDir = new File(args[0]);
         File mutPoolDir = new File(args[1]);
@@ -71,7 +72,7 @@ public class DemoMutantExecution {
         for (int i = 0; i < paths.length; i++) {
             cpBuilder.append(paths[i]);
             if (i != paths.length - 1)
-                cpBuilder.append(';');
+                cpBuilder.append(':');
         }
         return cpBuilder.toString();
     }
