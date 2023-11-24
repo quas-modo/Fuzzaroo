@@ -44,7 +44,7 @@ public class UOIMutator extends AbstractMutator {
                     Expression expr = n.getExpression().orElse(null);
                     if (expr != null) {
                         // 检查表达式是否适合一元操作符插入
-                        if (expr instanceof BinaryExpr || expr instanceof NameExpr || expr instanceof LiteralExpr || expr instanceof MethodCallExpr) {
+                        if (expr instanceof BinaryExpr || expr instanceof NameExpr || expr instanceof MethodCallExpr) {
                             mutPoints.add(expr);
                         }
                     }
