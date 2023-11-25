@@ -5,6 +5,9 @@ public class Calculator {
     private Calculator() {}
 
     public static int add(int a, int b) {
+        a = a + 1;
+        int c = 2;
+        b = c + b;
         return a + b;
     }
 

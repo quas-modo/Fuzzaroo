@@ -3,10 +3,7 @@ package edu.nju.mutest;
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.PackageDeclaration;
-import edu.nju.mutest.mutator.ABSMutator;
-import edu.nju.mutest.mutator.BinaryMutator;
-import edu.nju.mutest.mutator.Mutator;
-import edu.nju.mutest.mutator.UOIMutator;
+import edu.nju.mutest.mutator.*;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -56,6 +53,8 @@ public class MutationEngine {
                 mutator = new ABSMutator(cu);
                 break;
             case AOR:
+                mutator = new AORMutator(cu);
+                break;
             case LCR:
             case ROR:
             case UOI:
@@ -64,7 +63,6 @@ public class MutationEngine {
             default:
                 System.out.println("This mutator is not available!");
                 System.exit(1);
-                break;
         }
 
 
