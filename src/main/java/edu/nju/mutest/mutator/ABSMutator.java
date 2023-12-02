@@ -66,9 +66,8 @@ public class ABSMutator extends AbstractMutator{
                     mutants.add(insertUnaryExpr(targetExpr, expr));
                 }
             }
-
-
-
+            IntegerLiteralExpr zeroExpr = new IntegerLiteralExpr(0);
+            mutants.add(insertUnaryExpr(new UnaryExpr(zeroExpr, UnaryExpr.Operator.PLUS), expr)); // 虽然都变成+0了，但感觉也是正确的
         }
         return this.mutants;
     }
