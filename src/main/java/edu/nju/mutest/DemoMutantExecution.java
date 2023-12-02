@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -25,7 +23,7 @@ public class DemoMutantExecution {
             System.exit(0);
         }
 
-        TEST_SUITE_FQN = args[2];
+//        TEST_SUITE_FQN = args[2];
 
         File tsDir = new File(args[0]);
         File mutPoolDir = new File(args[1]);
@@ -39,8 +37,8 @@ public class DemoMutantExecution {
             System.exit(0);
         }
         List<File> mutDirs = Arrays.stream(fns)
-                                   .filter(f -> !f.getName().startsWith("."))
-                                   .collect(Collectors.toList());
+                .filter(f -> !f.getName().startsWith("."))
+                .collect(Collectors.toList());
         int mutNum = mutDirs.size();
         System.out.printf("[LOG] Locate %d mutants\n", mutNum);
 
@@ -68,7 +66,6 @@ public class DemoMutantExecution {
     private static String concateClassPath(String...paths) {
         StringBuilder cpBuilder = new StringBuilder();
         // Suitable for Unix system.
-        // todo: ? win
         for (int i = 0; i < paths.length; i++) {
             cpBuilder.append(paths[i]);
             if (i != paths.length - 1)
@@ -88,12 +85,21 @@ public class DemoMutantExecution {
 
         // Build class path.
         String cp = concateClassPath(tsDir.getAbsolutePath(), mutDir.getAbsolutePath());
-        System.out.println(cp);
+//        String directory = System.getProperty(tsDir.getAbsolutePath());
+//        System.out.println(tsDir.getAbsolutePath());
+//        File currentDir = new File(directory);
+//        File[] files = currentDir.listFiles();
+//        if(files != null){
+//            for(File file: files){
+//                System.out.println(file.getName());
+//            }
+//        }
+
         // Construct executor
         ProcessBuilder pb = new ProcessBuilder("java", "-cp", cp, TEST_SUITE_FQN);
         pb.redirectErrorStream(true);
         Process p = pb.start();
-        BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream(), StandardCharsets.UTF_8));
+        BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
         // Wait for execution to finish, or we cannot get exit value.
         p.waitFor();
 
