@@ -41,4 +41,14 @@ public class CalculatorTestSuite {
                     "[TEST] testMul() fail (%d, %d)!", oracle, res));
     }
 
+    private static void testLCR() {
+        int oracle = 0;
+        int res = Calculator.LCR(true,true);
+        if (oracle == res)
+            System.out.println("[TEST] testMul() pass!");
+        else
+            throw new RuntimeException(String.format(
+                    "[TEST] testMul() fail (%d, %d)!", oracle, res));
+    }
+
 }

@@ -21,5 +21,11 @@ public class Calculator {
         return a * b;
     }
 
-
+    public static int LCR(boolean a, boolean b) {
+        boolean c = a || b;
+        boolean d = a && b;
+        boolean e = a | b;
+        boolean f = a & b;
+        return 0;
+    }
 }

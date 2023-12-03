@@ -56,6 +56,8 @@ public class MutationEngine {
                 mutator = new AORMutator(cu);
                 break;
             case LCR:
+                mutator = new LCRMutator(cu);
+                break;
             case ROR:
             case UOI:
                 mutator = new UOIMutator(cu);
