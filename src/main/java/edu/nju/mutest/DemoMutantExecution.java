@@ -13,17 +13,17 @@ import java.util.stream.Collectors;
  */
 public class DemoMutantExecution {
 
-    static String TEST_SUITE_FQN;
+    static String TEST_SUITE_FQN = "edu.nju.mutest.example.RORTestSuite";
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        if (args.length != 3) {
+        if (args.length != 2) {
             // Require param for specifying test suite.
             System.out.println("DemoMutantExecution: <testsuite_dir> <mutant_pool_dir>");
             System.exit(0);
         }
 
-        TEST_SUITE_FQN = args[2];
+//        TEST_SUITE_FQN = args[2];
 
         File tsDir = new File(args[0]);
         File mutPoolDir = new File(args[1]);
