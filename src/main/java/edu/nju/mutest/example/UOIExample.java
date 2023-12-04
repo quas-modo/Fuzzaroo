@@ -17,6 +17,6 @@ public class UOIExample {
 
     public static boolean equal(int a) {
         int b = 10;
-        return (a == b);  // Binary operator applied: EQUAL
+        return a == b;  // Binary operator applied: EQUAL
     }
 }

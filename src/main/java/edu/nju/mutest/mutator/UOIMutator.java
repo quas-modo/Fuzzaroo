@@ -43,8 +43,7 @@ public class UOIMutator extends AbstractMutator {
                     super.visit(n, arg);
                     Expression expr = n.getExpression().orElse(null);
                     if (expr != null) {
-                        // 检查表达式是否适合一元操作符插入
-                        if (expr instanceof BinaryExpr || expr instanceof NameExpr || expr instanceof MethodCallExpr) {
+                        if (expr instanceof BinaryExpr || expr instanceof NameExpr || expr instanceof MethodCallExpr || expr instanceof BooleanLiteralExpr) {
                             mutPoints.add(expr);
                         }
                     }
@@ -63,12 +62,42 @@ public class UOIMutator extends AbstractMutator {
             for (UnaryExpr.Operator op : uoiOperators) {
                 if (isOperatorApplicable(expr, op)) {
                     UnaryExpr unaryExpr = new UnaryExpr(expr.clone(), op);
+                    // 特殊处理逻辑非操作符
+                    if (op == UnaryExpr.Operator.LOGICAL_COMPLEMENT && needsParentheses(expr)) {
+                        unaryExpr = new UnaryExpr(new EnclosedExpr(expr.clone()), op);
+                    }
                     mutants.add(insertUnaryExpr(unaryExpr, expr));
                 }
             }
         }
         return mutants;
     }
+
+    private boolean isBooleanExpression(Expression expr) {
+        if (expr instanceof BinaryExpr) {
+            BinaryExpr binaryExpr = (BinaryExpr) expr;
+            switch (binaryExpr.getOperator()) {
+                case EQUALS:
+                case NOT_EQUALS:
+                case LESS:
+                case LESS_EQUALS:
+                case GREATER:
+                case GREATER_EQUALS:
+                case OR:
+                case AND:
+                    return true;
+                default:
+                    return false;
+            }
+        } else if (expr instanceof UnaryExpr) {
+            UnaryExpr unaryExpr = (UnaryExpr) expr;
+            return unaryExpr.getOperator() == UnaryExpr.Operator.LOGICAL_COMPLEMENT;
+        } else if (expr instanceof MethodCallExpr || expr instanceof BooleanLiteralExpr) {
+            return true;
+        }
+        return false;
+    }
+
 
     private boolean isOperatorApplicable(Expression expr, UnaryExpr.Operator op) {
         // 基于表达式的类型和结构来决定是否适用操作符
@@ -79,10 +108,8 @@ public class UOIMutator extends AbstractMutator {
                 return expr instanceof NameExpr || expr instanceof FieldAccessExpr;
 
             case LOGICAL_COMPLEMENT:
-                // 逻辑非运算符通常用于布尔表达式
-                // 这里使用了简单的启发式方法，如有必要，可以增加更复杂的逻辑
-                return expr instanceof BinaryExpr || expr instanceof UnaryExpr ||
-                        expr instanceof MethodCallExpr || expr instanceof BooleanLiteralExpr;
+                // 确保表达式是有效的布尔表达式
+                return isBooleanExpression(expr);
 
             case PLUS:
             case MINUS:
@@ -96,6 +123,11 @@ public class UOIMutator extends AbstractMutator {
             default:
                 return false;
         }
+    }
+
+    private boolean needsParentheses(Expression expr) {
+        // 判断是否需要括号包围表达式
+        return !(expr instanceof EnclosedExpr || expr instanceof BooleanLiteralExpr || expr instanceof NameExpr);
     }
 
 
