@@ -4,8 +4,8 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.PackageDeclaration;
 import edu.nju.mutest.mutator.Mutator;
+import edu.nju.mutest.mutator.RORMutator;
 import org.apache.commons.io.FileUtils;
-import edu.nju.mutest.mutator.BinaryMutator;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -33,7 +33,7 @@ public class DemoSrcMutationEngine {
 
         // Initialize mutator(s).
         CompilationUnit cu = StaticJavaParser.parse(srcFile);
-        Mutator mutator = new BinaryMutator(cu);
+        Mutator mutator = new RORMutator(cu);
 
         // Locate mutation points.
         mutator.locateMutationPoints();

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ $# -lt 1 ]; then
   echo "<prepare-mutest>: <POOL_DIR>"
   exit 1
