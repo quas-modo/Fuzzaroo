@@ -12,10 +12,12 @@ import static com.github.javaparser.ast.expr.BinaryExpr.Operator.*;
 public class LCRMutator extends AbstractMutator {
     private List<BinaryExpr> mutPoints = null;
     private List<CompilationUnit> mutants = new NodeList<>();
-    private BinaryExpr.Operator[] targetOps = {
+    private BinaryExpr.Operator[] targetOps1 = {
             BinaryExpr.Operator.BINARY_AND,
             BinaryExpr.Operator.BINARY_OR,
             BinaryExpr.Operator.XOR,
+    };
+    private BinaryExpr.Operator[] targetOps2 = {
             AND,
             OR
     };
@@ -43,9 +45,16 @@ public class LCRMutator extends AbstractMutator {
 
             // Generate simple mutation. Each mutant contains only one
             // mutated point.
-            for (BinaryExpr.Operator targetOp : targetOps) {
+            for (BinaryExpr.Operator targetOp : targetOps1) {
                 // Skip self
-                if (origOp.equals(targetOp) || !containsTargetOperator(origOp))
+                if (origOp.equals(targetOp) || !containsTargetOperator1(origOp))
+                    continue;
+                // Mutate
+                mutants.add(mutateOnce(mp, targetOp));
+            }
+            for (BinaryExpr.Operator targetOp : targetOps2) {
+                // Skip self
+                if (origOp.equals(targetOp) || !containsTargetOperator2(origOp))
                     continue;
                 // Mutate
                 mutants.add(mutateOnce(mp, targetOp));
@@ -65,8 +74,16 @@ public class LCRMutator extends AbstractMutator {
         return this.origCU.clone();
     }
 
-    private boolean containsTargetOperator(BinaryExpr.Operator op) {
-        for (BinaryExpr.Operator targetOp : targetOps) {
+    private boolean containsTargetOperator1(BinaryExpr.Operator op) {
+        for (BinaryExpr.Operator targetOp : targetOps1) {
+            if (op.equals(targetOp)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private boolean containsTargetOperator2(BinaryExpr.Operator op) {
+        for (BinaryExpr.Operator targetOp : targetOps2) {
             if (op.equals(targetOp)) {
                 return true;
             }

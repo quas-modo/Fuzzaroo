@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  */
 public class DemoMutantExecution {
 
-    static String TEST_SUITE_FQN = "edu.nju.mutest.example.CalculatorTest";
+    static String TEST_SUITE_FQN;
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
@@ -23,7 +23,7 @@ public class DemoMutantExecution {
             System.exit(0);
         }
 
-//        TEST_SUITE_FQN = args[2];
+        TEST_SUITE_FQN = args[2];
 
         File tsDir = new File(args[0]);
         File mutPoolDir = new File(args[1]);
