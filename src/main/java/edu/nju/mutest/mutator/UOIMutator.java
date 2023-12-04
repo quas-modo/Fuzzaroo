@@ -61,14 +61,43 @@ public class UOIMutator extends AbstractMutator {
 
         for (Expression expr : mutPoints) {
             for (UnaryExpr.Operator op : uoiOperators) {
-                // 创建新的一元表达式
-                UnaryExpr unaryExpr = new UnaryExpr(expr.clone(), op);
-                // 插入一元表达式并添加到变异体列表中
-                mutants.add(insertUnaryExpr(unaryExpr, expr));
+                if (isOperatorApplicable(expr, op)) {
+                    UnaryExpr unaryExpr = new UnaryExpr(expr.clone(), op);
+                    mutants.add(insertUnaryExpr(unaryExpr, expr));
+                }
             }
         }
         return mutants;
     }
+
+    private boolean isOperatorApplicable(Expression expr, UnaryExpr.Operator op) {
+        // 基于表达式的类型和结构来决定是否适用操作符
+        switch (op) {
+            case PREFIX_INCREMENT:
+            case PREFIX_DECREMENT:
+                // 增加和减少运算符通常适用于变量（例如，NameExpr）
+                return expr instanceof NameExpr || expr instanceof FieldAccessExpr;
+
+            case LOGICAL_COMPLEMENT:
+                // 逻辑非运算符通常用于布尔表达式
+                // 这里使用了简单的启发式方法，如有必要，可以增加更复杂的逻辑
+                return expr instanceof BinaryExpr || expr instanceof UnaryExpr ||
+                        expr instanceof MethodCallExpr || expr instanceof BooleanLiteralExpr;
+
+            case PLUS:
+            case MINUS:
+            case BITWISE_COMPLEMENT:
+                // 通常适用于数字类型
+                // 可以根据表达式的类型进行更精确的检查
+                return expr instanceof LiteralExpr || expr instanceof BinaryExpr ||
+                        expr instanceof UnaryExpr || expr instanceof NameExpr ||
+                        expr instanceof MethodCallExpr || expr instanceof FieldAccessExpr;
+
+            default:
+                return false;
+        }
+    }
+
 
     private CompilationUnit insertUnaryExpr(UnaryExpr unaryExpr, Expression originalExpr) {
         // 克隆原始 CompilationUnit
