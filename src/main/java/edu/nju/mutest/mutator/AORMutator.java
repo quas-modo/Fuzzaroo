@@ -40,6 +40,17 @@ public class AORMutator extends AbstractMutator{
 
             // Generate simple mutation. Each mutant contains only one
             // mutated point.
+            boolean flag = false;
+            for (BinaryExpr.Operator targetOp: targetOps){
+                if(origOp.equals(targetOp)){
+                    flag = true;
+                    break;
+                }
+            }
+
+            if(!flag) continue;
+
+
             for (BinaryExpr.Operator targetOp : targetOps) {
                 // Skip self
                 if (origOp.equals(targetOp))
