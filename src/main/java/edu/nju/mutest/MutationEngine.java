@@ -16,7 +16,7 @@ import java.util.Optional;
 public class MutationEngine {
     // choices of
     enum Operator{
-        ABS, AOR, LCR, ROR, UOI
+        ABS, AOR, LCR, ROR, UOI, AIR
     }
 
     public static void main(String[] args) throws IOException {
@@ -33,6 +33,7 @@ public class MutationEngine {
         operator.put("lcr", Operator.LCR);
         operator.put("ror", Operator.ROR);
         operator.put("uoi", Operator.UOI);
+        operator.put("air", Operator.AIR);
 
         // Read in original program(s).
         File srcFile = new File(args[0]);
@@ -59,8 +60,13 @@ public class MutationEngine {
                 mutator = new LCRMutator(cu);
                 break;
             case ROR:
+                mutator = new RORMutator(cu);
+                break;
             case UOI:
                 mutator = new UOIMutator(cu);
+                break;
+            case AIR:
+                mutator = new AIRMutator(cu);
                 break;
             default:
                 System.out.println("This mutator is not available!");
