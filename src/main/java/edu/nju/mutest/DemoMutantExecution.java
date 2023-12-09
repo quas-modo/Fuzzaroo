@@ -17,13 +17,13 @@ public class DemoMutantExecution {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        if (args.length != 2) {
+        if (args.length != 3) {
             // Require param for specifying test suite.
             System.out.println("DemoMutantExecution: <testsuite_dir> <mutant_pool_dir>");
             System.exit(0);
         }
 
-//        TEST_SUITE_FQN = args[2];
+        TEST_SUITE_FQN = args[2];
 
         File tsDir = new File(args[0]);
         File mutPoolDir = new File(args[1]);
@@ -84,7 +84,9 @@ public class DemoMutantExecution {
     private static boolean execute(File tsDir, File mutDir) throws IOException, InterruptedException {
 
         // Build class path.
+
         String cp = concateClassPath(tsDir.getAbsolutePath(), mutDir.getAbsolutePath());
+        System.out.println(cp);
 //        String directory = System.getProperty(tsDir.getAbsolutePath());
 //        System.out.println(tsDir.getAbsolutePath());
 //        File currentDir = new File(directory);
