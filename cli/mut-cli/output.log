@@ -1,0 +1,118 @@
+[36m[STAGE] execute mutants, calculate score
+[LOG] Test suite dir: /home/Fuzzaroo/testsuite
+[LOG] Mutant pool dir: /home/Fuzzaroo/pool
+[LOG] Locate 15 mutants
+[LOG] Start to execute mutants...
+[LOG] -------------------------------------------------
+[LOG] Execute mut-6
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-6
+Exception in thread "main" java.lang.RuntimeException: [TEST] testPabs() fail (8, 0)!
+	at edu.nju.mutest.example.ABSTestSuite.testPabs(ABSTestSuite.java:16)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:5)
+[LOG] Killed mut-6
+[LOG] -------------------------------------------------
+[LOG] Execute mut-11
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-11
+Exception in thread "main" java.lang.RuntimeException: [TEST] testPabs() fail (8, -8)!
+	at edu.nju.mutest.example.ABSTestSuite.testPabs(ABSTestSuite.java:16)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:5)
+[LOG] Killed mut-11
+[LOG] -------------------------------------------------
+[LOG] Execute mut-8
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-8
+[TEST] testPabs() pass!
+Exception in thread "main" java.lang.RuntimeException: [TEST] testNabs() fail (16, -2)!
+	at edu.nju.mutest.example.ABSTestSuite.testNabs(ABSTestSuite.java:28)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:6)
+[LOG] Killed mut-8
+[LOG] -------------------------------------------------
+[LOG] Execute mut-15
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-15
+[TEST] testPabs() pass!
+[TEST] testNabs() pass!
+Exception in thread "main" java.lang.RuntimeException: [TEST] testZero() fail (20, 10)!
+	at edu.nju.mutest.example.ABSTestSuite.testZero(ABSTestSuite.java:40)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:7)
+[LOG] Killed mut-15
+[LOG] -------------------------------------------------
+[LOG] Execute mut-13
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-13
+[TEST] testPabs() pass!
+[TEST] testNabs() pass!
+[TEST] testZero() pass!
+[LOG] Survived mut-13
+[LOG] -------------------------------------------------
+[LOG] Execute mut-14
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-14
+[TEST] testPabs() pass!
+[TEST] testNabs() pass!
+Exception in thread "main" java.lang.RuntimeException: [TEST] testZero() fail (20, 0)!
+	at edu.nju.mutest.example.ABSTestSuite.testZero(ABSTestSuite.java:40)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:7)
+[LOG] Killed mut-14
+[LOG] -------------------------------------------------
+[LOG] Execute mut-9
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-9
+[TEST] testPabs() pass!
+Exception in thread "main" java.lang.RuntimeException: [TEST] testNabs() fail (16, 7)!
+	at edu.nju.mutest.example.ABSTestSuite.testNabs(ABSTestSuite.java:28)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:6)
+[LOG] Killed mut-9
+[LOG] -------------------------------------------------
+[LOG] Execute mut-12
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-12
+Exception in thread "main" java.lang.RuntimeException: [TEST] testPabs() fail (8, 0)!
+	at edu.nju.mutest.example.ABSTestSuite.testPabs(ABSTestSuite.java:16)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:5)
+[LOG] Killed mut-12
+[LOG] -------------------------------------------------
+[LOG] Execute mut-5
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-5
+Exception in thread "main" java.lang.RuntimeException: [TEST] testPabs() fail (8, -8)!
+	at edu.nju.mutest.example.ABSTestSuite.testPabs(ABSTestSuite.java:16)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:5)
+[LOG] Killed mut-5
+[LOG] -------------------------------------------------
+[LOG] Execute mut-7
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-7
+[TEST] testPabs() pass!
+[TEST] testNabs() pass!
+[TEST] testZero() pass!
+[LOG] Survived mut-7
+[LOG] -------------------------------------------------
+[LOG] Execute mut-3
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-3
+Exception in thread "main" java.lang.RuntimeException: [TEST] testPabs() fail (8, 5)!
+	at edu.nju.mutest.example.ABSTestSuite.testPabs(ABSTestSuite.java:16)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:5)
+[LOG] Killed mut-3
+[LOG] -------------------------------------------------
+[LOG] Execute mut-1
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-1
+[TEST] testPabs() pass!
+[TEST] testNabs() pass!
+[TEST] testZero() pass!
+[LOG] Survived mut-1
+[LOG] -------------------------------------------------
+[LOG] Execute mut-2
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-2
+Exception in thread "main" java.lang.RuntimeException: [TEST] testPabs() fail (8, 2)!
+	at edu.nju.mutest.example.ABSTestSuite.testPabs(ABSTestSuite.java:16)
+	at edu.nju.mutest.example.ABSTestSuite.main(ABSTestSuite.java:5)
+[LOG] Killed mut-2
+[LOG] -------------------------------------------------
+[LOG] Execute mut-10
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-10
+[TEST] testPabs() pass!
+[TEST] testNabs() pass!
+[TEST] testZero() pass!
+[LOG] Survived mut-10
+[LOG] -------------------------------------------------
+[LOG] Execute mut-4
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-4
+[TEST] testPabs() pass!
+[TEST] testNabs() pass!
+[TEST] testZero() pass!
+[LOG] Survived mut-4
+[LOG] ======================================================
+[LOG] Stats: 10/15(#killed/#total), score=66.67

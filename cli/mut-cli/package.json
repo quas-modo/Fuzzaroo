@@ -1,0 +1,16 @@
+{
+  "name": "mut-cli",
+  "version": "1.0.0",
+  "description": "njuse software testing homework cli",
+  "main": "index.js",
+  "bin": "./bin/mut-cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "quasdo",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "shelljs": "^0.8.5"
+  }
+}
