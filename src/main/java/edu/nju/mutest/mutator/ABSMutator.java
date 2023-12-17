@@ -47,7 +47,9 @@ public class ABSMutator extends AbstractMutator{
                 // 适用于int或者double的转换
                 for(UnaryExpr.Operator targetOp: unaryTargetOps){
                     UnaryExpr targetExpr = new UnaryExpr(expr, targetOp);
-                    mutants.add(insertUnaryExpr(targetExpr, expr));
+                    EnclosedExpr enclosedExpr = new EnclosedExpr(targetExpr);
+                    UnaryExpr newTargetExpr = new UnaryExpr(enclosedExpr, UnaryExpr.Operator.PLUS);
+                    mutants.add(insertUnaryExpr(newTargetExpr, expr));
                 }
 
             }else if(expr instanceof UnaryExpr){

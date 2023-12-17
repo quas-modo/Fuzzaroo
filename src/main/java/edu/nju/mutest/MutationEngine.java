@@ -35,10 +35,26 @@ public class MutationEngine {
         operator.put("uoi", Operator.UOI);
         operator.put("air", Operator.AIR);
 
+        //todo: 一些需要适配的地方
+
+        HashMap<String, String> examples = new HashMap<>();
+        examples.put("abs", "ABSExample.java");
+        examples.put("air", "AIRExample.java");
+        examples.put("aor", "AORExample.java");
+        examples.put("complex", "ComplexExample.java");
+        examples.put("lcr", "LCRExample.java");
+        examples.put("ror", "RORExample.java");
+        examples.put("uoi", "UOIExample.java");
+
         // Read in original program(s).
+        String optStr = args[2];
+
+        //String example = examples.get(optStr);
+        //File srcFile = new File("src/main/java/edu/nju/mutest/example/" + example);
+
+
         File srcFile = new File(args[0]);
         File outDir = new File(args[1]);
-        String optStr = args[2];
         Operator opt = operator.get(optStr);
 
         System.out.println("[LOG] Source file: " + srcFile.getAbsolutePath());

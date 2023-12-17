@@ -7,6 +7,7 @@ import com.github.javaparser.ast.PackageDeclaration;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.expr.BinaryExpr;
+import com.github.javaparser.ast.expr.Expression;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 import com.github.javaparser.ast.stmt.Statement;
 import edu.nju.mutest.visitor.collector.BinaryExprCollector;
@@ -68,6 +69,12 @@ public class JavaparserTest {
             System.out.println(op.getClass());
         }
 
+    }
+
+    @Test
+    public void testABS() throws Exception{
+        int a = - 1;
+        System.out.println(a);
     }
 
 }

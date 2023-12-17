@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
  */
 public class DemoMutantExecution {
 
-    static String TEST_SUITE_FQN = "edu.nju.mutest.example.LCRTestsuite";
+    static String TEST_SUITE_FQN = "edu.nju.mutest.TestSuite.LCRTestsuite";
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
@@ -22,8 +23,16 @@ public class DemoMutantExecution {
             System.out.println("DemoMutantExecution: <testsuite_dir> <mutant_pool_dir>");
             System.exit(0);
         }
-
-        TEST_SUITE_FQN = args[2];
+        
+        HashMap<String, String> testsuites = new HashMap<>();
+        testsuites.put("abs", "ABSTestSuite");
+        testsuites.put("air", "AIRTestSuite");
+        testsuites.put("aor", "AORTestSuite");
+        testsuites.put("complex", "ComplexTestSuite");
+        testsuites.put("lcr", "LCRTestSuite");
+        testsuites.put("ror", "RORTestSuite");
+        testsuites.put("uoi", "UOITestSuite");
+        TEST_SUITE_FQN = "edu.nju.mutest.example." + testsuites.get(args[2]);
 
         File tsDir = new File(args[0]);
         File mutPoolDir = new File(args[1]);
@@ -69,7 +78,7 @@ public class DemoMutantExecution {
         for (int i = 0; i < paths.length; i++) {
             cpBuilder.append(paths[i]);
             if (i != paths.length - 1)
-                cpBuilder.append(':');
+                cpBuilder.append(';');
         }
         return cpBuilder.toString();
     }
