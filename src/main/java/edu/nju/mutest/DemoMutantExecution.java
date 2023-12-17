@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -112,7 +113,7 @@ public class DemoMutantExecution {
         Process p = pb.start();
         BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
         // Wait for execution to finish, or we cannot get exit value.
-        p.waitFor();
+        p.waitFor(1, TimeUnit.SECONDS);
 
         // Read execution info
         String line;
