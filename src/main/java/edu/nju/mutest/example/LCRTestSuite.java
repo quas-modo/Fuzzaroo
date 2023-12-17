@@ -1,6 +1,6 @@
 package edu.nju.mutest.example;
 
-public class LCRTestsuite {
+public class LCRTestSuite {
     public static void main(String[] args) {
         testBinaryAnd();
         testBinaryOR();
@@ -9,9 +9,10 @@ public class LCRTestsuite {
         testOr();
     }
     //5 & 3 = 1
+    //1&1=1
     private static void testBinaryAnd() {
         int oracle = 1;
-        int res = LCRExample.binaryAnd(5,3);
+        int res = LCRExample.binaryAnd(1,1);
         if (oracle == res)
             System.out.println("[TEST] testBinaryAnd() pass!");
         else
@@ -19,9 +20,10 @@ public class LCRTestsuite {
                     "[TEST] testBinaryAnd() fail (%d, %d)!", oracle, res));
     }
     //5 | 3 = 7
+    //1|1=1
     private static void testBinaryOR() {
         int oracle = 7;
-        int res = LCRExample.binaryAnd(5,3);
+        int res = LCRExample.binaryOr(5,3);
         if (oracle == res)
             System.out.println("[TEST] testBinaryOR() pass!");
         else
@@ -31,7 +33,7 @@ public class LCRTestsuite {
     //5 ^ 3 = 6
     private static void testXOR() {
         int oracle = 6;
-        int res = LCRExample.binaryAnd(5,3);
+        int res = LCRExample.XOR(5,3);
         if (oracle == res)
             System.out.println("[TEST] testXOR() pass!");
         else

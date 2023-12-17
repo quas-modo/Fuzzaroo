@@ -78,7 +78,7 @@ public class DemoMutantExecution {
         for (int i = 0; i < paths.length; i++) {
             cpBuilder.append(paths[i]);
             if (i != paths.length - 1)
-                cpBuilder.append(';');
+                cpBuilder.append(':');
         }
         return cpBuilder.toString();
     }
