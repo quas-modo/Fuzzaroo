@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  */
 public class DemoMutantExecution {
 
-    static String TEST_SUITE_FQN = "edu.nju.mutest.TestSuite.LCRTestsuite";
+    static String TEST_SUITE_FQN = "edu.nju.mutest.example.ComplexTestSuite";
 
     public static void main(String[] args) throws IOException, InterruptedException {
 

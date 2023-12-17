@@ -49,7 +49,7 @@ public class RORMutator extends AbstractMutator {
             // mutated point.
             for (BinaryExpr.Operator targetOp : targetOps2) {
                 // Skip self
-                if (origOp.equals(targetOp))
+                if (origOp.equals(targetOp) || !containsTargetOperator2(origOp))
                     continue;
                 // Mutate
                 mutants.add(mutateOnce(mp, targetOp));
@@ -79,5 +79,13 @@ public class RORMutator extends AbstractMutator {
         if (mutants.isEmpty())
             System.out.println("Oops, seems no mutation has been conducted yet. Call mutate() first!");
         return mutants;
+    }
+    private boolean containsTargetOperator2(BinaryExpr.Operator op) {
+        for (BinaryExpr.Operator targetOp : targetOps2) {
+            if (op.equals(targetOp)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
