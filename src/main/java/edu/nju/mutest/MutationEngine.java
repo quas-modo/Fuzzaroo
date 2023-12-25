@@ -21,7 +21,7 @@ public class MutationEngine {
 
     public static void main(String[] args) throws IOException {
 
-        if (args.length != 3) {
+        if (args.length != 4) {
             System.out.println("DemoSrcMutationEngine: <source_java_file> <mutant_pool_dir> <operator_type>");
             System.out.println("Example params: src/main/java/edu/nju/mutest/example/Calculator.java pool/ abs");
             System.exit(0);
@@ -49,11 +49,11 @@ public class MutationEngine {
         // Read in original program(s).
         String optStr = args[2];
 
-        //String example = examples.get(optStr);
-        //File srcFile = new File("src/main/java/edu/nju/mutest/example/" + example);
+        String example = examples.get(args[3]);
+        File srcFile = new File("/home/Fuzzaroo/src/main/java/edu/nju/mutest/example/" + example);
 
 
-        File srcFile = new File(args[0]);
+        //File srcFile = new File(args[0]);
         File outDir = new File(args[1]);
         Operator opt = operator.get(optStr);
 
