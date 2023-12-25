@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 /**
  * A demo for executing test suite against mutants
  */
-public class DemoMutantExecution {
+public class MutantExecution {
 
     static String TEST_SUITE_FQN = "edu.nju.mutest.example.ComplexTestSuite";
 
