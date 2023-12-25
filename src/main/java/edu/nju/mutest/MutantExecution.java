@@ -7,12 +7,13 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
  * A demo for executing test suite against mutants
  */
-public class DemoMutantExecution {
+public class MutantExecution {
 
     static String TEST_SUITE_FQN = "edu.nju.mutest.example.ComplexTestSuite";
 
@@ -112,7 +113,7 @@ public class DemoMutantExecution {
         Process p = pb.start();
         BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
         // Wait for execution to finish, or we cannot get exit value.
-        p.waitFor();
+        p.waitFor(1, TimeUnit.SECONDS);
 
         // Read execution info
         String line;

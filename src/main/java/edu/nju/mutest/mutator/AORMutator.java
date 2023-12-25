@@ -2,8 +2,10 @@ package edu.nju.mutest.mutator;
 
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.NodeList;
-import com.github.javaparser.ast.expr.BinaryExpr;
+import com.github.javaparser.ast.expr.*;
+import com.sun.jdi.Field;
 import edu.nju.mutest.visitor.collector.BinaryExprCollector;
+import edu.nju.mutest.visitor.collector.cond.NumericLiteralCond;
 
 import java.util.List;
 
@@ -34,6 +36,13 @@ public class AORMutator extends AbstractMutator{
 
         // Modify each mutation points.
         for (BinaryExpr mp : mutPoints) {
+            Expression left = mp.getLeft();
+            Expression right = mp.getRight();
+            if(left instanceof StringLiteralExpr || left instanceof CharLiteralExpr || left instanceof FieldAccessExpr) continue;
+            if(right instanceof StringLiteralExpr || right instanceof CharLiteralExpr|| right instanceof FieldAccessExpr) continue;
+/*            if(!(left instanceof LiteralExpr || left instanceof UnaryExpr || left instanceof BinaryExpr)) continue;*/
+/*            if(!(right instanceof LiteralExpr || right instanceof UnaryExpr || right instanceof BinaryExpr)) continue;*/
+
             // This is a polluted operation. So we preserve the original
             // operator for recovering.
             BinaryExpr.Operator origOp = mp.getOperator();
