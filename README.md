@@ -1,6 +1,7 @@
 # README项目文档
 
-具体代码实现以linux分支的为准
+具体代码实现以main分支为准，如需运行代码，可采用linux分支下的实现。
+演示视频：https://www.bilibili.com/video/BV1AQ4y177Ra/
 
 ## 项目简介
 
