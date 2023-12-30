@@ -9,6 +9,7 @@ const path = require('path')
 async function build(args) {
     const mutator = args['mutator']
     const stage = args['stage']
+    const testsuite = args['testsuite']
     console.log(args)
     if (!shell.which('java')) {
         shell.echo('Java version is not installed');
@@ -29,8 +30,7 @@ async function build(args) {
         return 
     }
 
-
-    sh_path = sh_path + " " + mutator
+    sh_path = sh_path + " " + mutator + " " + testsuite
     console.log(sh_path)
 
     shell.exec(sh_path, (code, stdout, stderr) => {
