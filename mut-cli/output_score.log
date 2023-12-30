@@ -1,0 +1,830 @@
+[36m[STAGE] execute mutants, calculate score
+[LOG] Test suite dir: /home/Fuzzaroo/testsuite
+[LOG] Mutant pool dir: /home/Fuzzaroo/pool
+[LOG] Locate 102 mutants
+[LOG] Start to execute mutants...
+[LOG] -------------------------------------------------
+[LOG] Execute mut-6
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-6
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-6
+[LOG] -------------------------------------------------
+[LOG] Execute mut-20
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-20
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-20
+[LOG] -------------------------------------------------
+[LOG] Execute mut-50
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-50
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-50
+[LOG] -------------------------------------------------
+[LOG] Execute mut-39
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-39
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-39
+[LOG] -------------------------------------------------
+[LOG] Execute mut-23
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-23
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.RuntimeException: [TEST] testSort() fail ([apple, banana, cherry], [banana, apple, cherry])!
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:47)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-23
+[LOG] -------------------------------------------------
+[LOG] Execute mut-91
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-91
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-91
+[LOG] -------------------------------------------------
+[LOG] Execute mut-98
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-98
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-98
+[LOG] -------------------------------------------------
+[LOG] Execute mut-11
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-11
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-11
+[LOG] -------------------------------------------------
+[LOG] Execute mut-54
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-54
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-54
+[LOG] -------------------------------------------------
+[LOG] Execute mut-62
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-62
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-62
+[LOG] -------------------------------------------------
+[LOG] Execute mut-24
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-24
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.RuntimeException: [TEST] testSort() fail ([apple, banana, cherry], [banana, apple, cherry])!
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:47)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-24
+[LOG] -------------------------------------------------
+[LOG] Execute mut-8
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-8
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-8
+[LOG] -------------------------------------------------
+[LOG] Execute mut-100
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-100
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-100
+[LOG] -------------------------------------------------
+[LOG] Execute mut-25
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-25
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-25
+[LOG] -------------------------------------------------
+[LOG] Execute mut-36
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-36
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-36
+[LOG] -------------------------------------------------
+[LOG] Execute mut-94
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-94
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-94
+[LOG] -------------------------------------------------
+[LOG] Execute mut-15
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-15
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-15
+[LOG] -------------------------------------------------
+[LOG] Execute mut-67
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-67
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-67
+[LOG] -------------------------------------------------
+[LOG] Execute mut-93
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-93
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-93
+[LOG] -------------------------------------------------
+[LOG] Execute mut-77
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-77
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-77
+[LOG] -------------------------------------------------
+[LOG] Execute mut-92
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-92
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-92
+[LOG] -------------------------------------------------
+[LOG] Execute mut-95
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-95
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-95
+[LOG] -------------------------------------------------
+[LOG] Execute mut-86
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-86
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-86
+[LOG] -------------------------------------------------
+[LOG] Execute mut-33
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-33
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-33
+[LOG] -------------------------------------------------
+[LOG] Execute mut-73
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-73
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-73
+[LOG] -------------------------------------------------
+[LOG] Execute mut-43
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-43
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-43
+[LOG] -------------------------------------------------
+[LOG] Execute mut-68
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-68
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-68
+[LOG] -------------------------------------------------
+[LOG] Execute mut-13
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-13
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-13
+[LOG] -------------------------------------------------
+[LOG] Execute mut-14
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-14
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-14
+[LOG] -------------------------------------------------
+[LOG] Execute mut-30
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-30
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-30
+[LOG] -------------------------------------------------
+[LOG] Execute mut-61
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-61
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-61
+[LOG] -------------------------------------------------
+[LOG] Execute mut-40
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-40
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-40
+[LOG] -------------------------------------------------
+[LOG] Execute mut-101
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-101
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-101
+[LOG] -------------------------------------------------
+[LOG] Execute mut-99
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-99
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-99
+[LOG] -------------------------------------------------
+[LOG] Execute mut-96
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-96
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-96
+[LOG] -------------------------------------------------
+[LOG] Execute mut-52
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-52
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-52
+[LOG] -------------------------------------------------
+[LOG] Execute mut-80
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-80
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-80
+[LOG] -------------------------------------------------
+[LOG] Execute mut-78
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-78
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-78
+[LOG] -------------------------------------------------
+[LOG] Execute mut-76
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-76
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-76
+[LOG] -------------------------------------------------
+[LOG] Execute mut-75
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-75
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-75
+[LOG] -------------------------------------------------
+[LOG] Execute mut-42
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-42
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-42
+[LOG] -------------------------------------------------
+[LOG] Execute mut-9
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-9
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-9
+[LOG] -------------------------------------------------
+[LOG] Execute mut-46
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-46
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-46
+[LOG] -------------------------------------------------
+[LOG] Execute mut-12
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-12
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-12
+[LOG] -------------------------------------------------
+[LOG] Execute mut-57
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-57
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-57
+[LOG] -------------------------------------------------
+[LOG] Execute mut-29
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-29
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-29
+[LOG] -------------------------------------------------
+[LOG] Execute mut-5
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-5
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-5
+[LOG] -------------------------------------------------
+[LOG] Execute mut-7
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-7
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-7
+[LOG] -------------------------------------------------
+[LOG] Execute mut-34
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-34
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-34
+[LOG] -------------------------------------------------
+[LOG] Execute mut-16
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-16
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-16
+[LOG] -------------------------------------------------
+[LOG] Execute mut-3
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-3
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-3
+[LOG] -------------------------------------------------
+[LOG] Execute mut-45
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-45
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-45
+[LOG] -------------------------------------------------
+[LOG] Execute mut-26
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-26
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-26
+[LOG] -------------------------------------------------
+[LOG] Execute mut-31
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-31
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-31
+[LOG] -------------------------------------------------
+[LOG] Execute mut-65
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-65
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-65
+[LOG] -------------------------------------------------
+[LOG] Execute mut-35
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-35
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-35
+[LOG] -------------------------------------------------
+[LOG] Execute mut-18
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-18
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-18
+[LOG] -------------------------------------------------
+[LOG] Execute mut-53
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-53
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-53
+[LOG] -------------------------------------------------
+[LOG] Execute mut-19
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-19
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-19
+[LOG] -------------------------------------------------
+[LOG] Execute mut-22
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-22
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-22
+[LOG] -------------------------------------------------
+[LOG] Execute mut-28
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-28
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-28
+[LOG] -------------------------------------------------
+[LOG] Execute mut-69
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-69
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-69
+[LOG] -------------------------------------------------
+[LOG] Execute mut-85
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-85
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-85
+[LOG] -------------------------------------------------
+[LOG] Execute mut-27
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-27
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-27
+[LOG] -------------------------------------------------
+[LOG] Execute mut-63
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-63
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-63
+[LOG] -------------------------------------------------
+[LOG] Execute mut-58
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-58
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-58
+[LOG] -------------------------------------------------
+[LOG] Execute mut-48
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-48
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-48
+[LOG] -------------------------------------------------
+[LOG] Execute mut-72
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-72
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-72
+[LOG] -------------------------------------------------
+[LOG] Execute mut-66
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-66
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-66
+[LOG] -------------------------------------------------
+[LOG] Execute mut-41
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-41
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-41
+[LOG] -------------------------------------------------
+[LOG] Execute mut-102
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-102
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-102
+[LOG] -------------------------------------------------
+[LOG] Execute mut-1
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-1
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-1
+[LOG] -------------------------------------------------
+[LOG] Execute mut-70
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-70
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-70
+[LOG] -------------------------------------------------
+[LOG] Execute mut-55
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-55
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-55
+[LOG] -------------------------------------------------
+[LOG] Execute mut-32
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-32
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-32
+[LOG] -------------------------------------------------
+[LOG] Execute mut-51
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-51
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-51
+[LOG] -------------------------------------------------
+[LOG] Execute mut-82
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-82
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-82
+[LOG] -------------------------------------------------
+[LOG] Execute mut-89
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-89
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-89
+[LOG] -------------------------------------------------
+[LOG] Execute mut-90
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-90
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-90
+[LOG] -------------------------------------------------
+[LOG] Execute mut-71
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-71
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-71
+[LOG] -------------------------------------------------
+[LOG] Execute mut-56
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-56
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-56
+[LOG] -------------------------------------------------
+[LOG] Execute mut-44
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-44
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-44
+[LOG] -------------------------------------------------
+[LOG] Execute mut-17
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-17
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-17
+[LOG] -------------------------------------------------
+[LOG] Execute mut-2
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-2
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-2
+[LOG] -------------------------------------------------
+[LOG] Execute mut-87
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-87
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at edu.nju.mutest.example.ComplexExample.insertion(ComplexExample.java:103)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:73)
+	at edu.nju.mutest.example.ComplexExample.sort(ComplexExample.java:63)
+	at edu.nju.mutest.example.ComplexTestSuite.testSort(ComplexTestSuite.java:42)
+	at edu.nju.mutest.example.ComplexTestSuite.main(ComplexTestSuite.java:8)
+[LOG] Killed mut-87
+[LOG] -------------------------------------------------
+[LOG] Execute mut-79
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-79
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-79
+[LOG] -------------------------------------------------
+[LOG] Execute mut-60
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-60
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-60
+[LOG] -------------------------------------------------
+[LOG] Execute mut-10
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-10
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-10
+[LOG] -------------------------------------------------
+[LOG] Execute mut-21
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-21
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-21
+[LOG] -------------------------------------------------
+[LOG] Execute mut-37
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-37
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-37
+[LOG] -------------------------------------------------
+[LOG] Execute mut-59
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-59
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-59
+[LOG] -------------------------------------------------
+[LOG] Execute mut-97
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-97
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-97
+[LOG] -------------------------------------------------
+[LOG] Execute mut-49
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-49
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-49
+[LOG] -------------------------------------------------
+[LOG] Execute mut-47
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-47
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-47
+[LOG] -------------------------------------------------
+[LOG] Execute mut-81
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-81
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-81
+[LOG] -------------------------------------------------
+[LOG] Execute mut-64
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-64
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-64
+[LOG] -------------------------------------------------
+[LOG] Execute mut-83
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-83
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-83
+[LOG] -------------------------------------------------
+[LOG] Execute mut-38
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-38
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-38
+[LOG] -------------------------------------------------
+[LOG] Execute mut-4
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-4
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-4
+[LOG] -------------------------------------------------
+[LOG] Execute mut-74
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-74
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-74
+[LOG] -------------------------------------------------
+[LOG] Execute mut-84
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-84
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-84
+[LOG] -------------------------------------------------
+[LOG] Execute mut-88
+/home/Fuzzaroo/testsuite:/home/Fuzzaroo/pool/mut-88
+[TEST] testIsTriangle() pass!
+[TEST] testGetType() pass!
+[TEST] testSort() pass!
+[LOG] Survived mut-88
+[LOG] ======================================================
+[LOG] Stats: 23/102(#killed/#total), score=22.55
