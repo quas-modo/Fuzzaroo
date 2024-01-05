@@ -54,13 +54,13 @@ public class RORMutator extends AbstractMutator {
                 // Mutate
                 mutants.add(mutateOnce(mp, targetOp));
             }
-            //一个true一个false
-            mp.setOperator(EQUALS);
-            mutants.add(this.origCU.clone());
-            mp.setOperator(NOT_EQUALS);
-            mutants.add(this.origCU.clone());
-            // Recovering
-            mp.setOperator(origOp);
+            // //一个true一个false
+            // mp.setOperator(EQUALS);
+            // mutants.add(this.origCU.clone());
+            // mp.setOperator(NOT_EQUALS);
+            // mutants.add(this.origCU.clone());
+            // // Recovering
+            // mp.setOperator(origOp);
 
         }
         return this.mutants;
